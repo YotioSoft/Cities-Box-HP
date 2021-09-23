@@ -14,15 +14,26 @@ body {
         "Nunito Sans",
         sans-serif;
 
-    background-color: #666;
+    background-color: #eee;
+
+    text-align: center;
+    display: block;
+}
+
+a {
+    color: #0088cc;
+    text-decoration: none;
+}
+a:hover {
+    color: #00aaff;
 }
 
 /* タイトル画面 */
-
 .title-catch-wrap {
     background-image: url("./img/title_background.png");
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
 }
 
 .title-catch {
@@ -45,23 +56,38 @@ body {
     padding: 50px;
 
     margin: 0px auto;
-}
 
-.wrap img {
-    max-width: 80%;
-    height: auto;
-}
+    display: flex;
+    flex-wrap: wrap;
 
-.wrap picture {
-    max-width: 80%;
-    height: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .title_wrap {
-    width: 750px;
+    margin: 0px auto;
+    color: #fff;
+    text-align: left;
+}
+
+.top_summary_wrap {
+    width: 650px;
     max-width: 100%;
 
     margin: 0px auto;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.top_summary_wrap img {
+    max-width: 80%;
+    height: auto;
+}
+
+.top_summary_wrap picture {
+    max-width: 80%;
+    height: auto;
 }
 
 /* メニュー */
@@ -93,11 +119,36 @@ body {
     margin: 0px 10px 0px 10px;
 }
 
+#space {
+    width: 100%;
+    height: 20px;
+    background-color: #00aaff;
+}
+
+/* コンテンツ部 */
+.contents {
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 100px;
+
+    text-shadow: 1px 2px 3px #808080
+}
+
 /* カラム */
 .column {
-    width: 1310px;
-    max-width: 100%;
-    margin: 0px auto;
+    text-align: left;
+    margin-bottom: 50px;
+}
 
-    padding: 50px 0px 50px 0px;
+.column .title {
+    font-size: 36px;
+}
+
+/* フッター */
+footer {
+    font-size: 14px;
+    font-family: system-ui;
+    margin-bottom: 10px;
 }
