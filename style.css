@@ -19,8 +19,6 @@ body {
 
     text-align: center;
     display: block;
-
-    margin-bottom: 0px;
 }
 
 a {
@@ -33,6 +31,7 @@ a:hover {
 
 p {
     margin: 0px;
+    padding: 0px;
 }
 
 /* タイトル画面 */
@@ -113,27 +112,6 @@ p {
     height: auto;
 }
 
-@media screen and (max-width: 1000px) {
-    .top_summary_wrap {
-        display:none
-    }
-
-    .title_wrap .main_text {
-        font-size: 3vw;
-    }
-    
-    .title_wrap .sub_text {
-        font-size: 2vw;
-        color: #fff;
-        text-align: left;
-        display: inline-block;
-    }
-
-    .wrap {
-        margin-left: -10%;
-    }
-}
-
 /* メニュー */
 .menu {
     width: 100%;
@@ -173,21 +151,48 @@ p {
 .contents {
     margin: 0 auto;
     padding-top: 50px;
-    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
     display: inline-block;
     margin-bottom: 100px;
 
-    text-shadow: 1px 2px 3px #808080
+    text-shadow: 1px 2px 3px #808080;
+
+    justify-content: center;
 }
 
 /* カラム */
 .column {
     text-align: left;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    max-width: 1100px;
 }
 
 .column .title {
     font-size: 36px;
+}
+
+.column .text {
+    width: 50%;
+    text-align: left;
+}
+
+.column .image {
+    width: 50%;
+    text-align: center;
+}
+.column .right_text {
+    width: 50%;
+    text-align: left;
+}
+.column .image picture img {
+    width: 90%;
 }
 
 /* フッター */
@@ -196,16 +201,49 @@ footer {
     font-family: system-ui;
 
     background-image: url("./img/footer-skyline.svg");
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: 100% auto;
 
     padding-top: 15%;
     padding-bottom: 0px;
+
+    width: 100%;
 }
 
 footer p {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+    .top_summary_wrap {
+        display:none
+    }
+
+    .title_wrap .main_text {
+        font-size: 3vw;
+    }
+    
+    .title_wrap .sub_text {
+        font-size: 2vw;
+        color: #fff;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .wrap {
+        margin-left: -10%;
+    }
+
+    .column .text {
+        width: 100%;
+    }
+    .column .image {
+        width: 100%;
+    }
+    .column .right_text {
+        width: 100%;
+    }
 }
