@@ -1,6 +1,7 @@
 /* 全体に関して */
 body {
     margin: 0px;
+    padding: 0px;
 
     font-family: "ヒラギノ角ゴシック W2","Hiragino Kaku Gothic W4",
         "Noto Sans CJK JP",
@@ -18,6 +19,8 @@ body {
 
     text-align: center;
     display: block;
+
+    margin-bottom: 0px;
 }
 
 a {
@@ -26,6 +29,10 @@ a {
 }
 a:hover {
     color: #00aaff;
+}
+
+p {
+    margin: 0px;
 }
 
 /* タイトル画面 */
@@ -77,6 +84,17 @@ a:hover {
     text-align: left;
 }
 
+.title_wrap .main_text {
+    font-size: 2vw;
+}
+
+.title_wrap .sub_text {
+    font-size: 1vw;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+}
+
 .top_summary_wrap {
     max-width: 350px;
     min-width: 50%;
@@ -93,6 +111,27 @@ a:hover {
 .top_summary_wrap picture {
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .top_summary_wrap {
+        display:none
+    }
+
+    .title_wrap .main_text {
+        font-size: 3vw;
+    }
+    
+    .title_wrap .sub_text {
+        font-size: 2vw;
+        color: #fff;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .wrap {
+        margin-left: -10%;
+    }
 }
 
 /* メニュー */
@@ -155,5 +194,18 @@ a:hover {
 footer {
     font-size: 14px;
     font-family: system-ui;
-    margin-bottom: 10px;
+
+    background-image: url("./img/footer-skyline.svg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center bottom;
+    background-size: 100% auto;
+
+    padding-top: 15%;
+    padding-bottom: 0px;
+}
+
+footer p {
+    padding-bottom: 10px;
+    color: #fff;
 }
